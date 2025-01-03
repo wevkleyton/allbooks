@@ -1,4 +1,4 @@
-const bodyParser = require('body-parser')
+    const bodyParser = require('body-parser')
 const jsonServer = require('json-server')
 const server = jsonServer.create()
 const router = jsonServer.router('./src/data/database.json')
@@ -18,5 +18,5 @@ server.use(/^(?!\/(public|livros|autores|categorias)).*$/, authenticationMiddlew
 server.use(router) //rotas na prota 3000
 
 server.listen(8000, () => {
-  console.log("API disponível em http://localhost:8000")
+  console.log("Acesse essa API em http://localhost:8000")
 })
